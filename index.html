@@ -8,13 +8,15 @@
 </head>
 <body>
   
-  <canvas id='lienzo' width='600' height='300'>
+  <canvas id='lienzo' width='500' height='300'>
     Canvas no soportado por tu navegador web
   </canvas>
 
   <script>
-    let o = document.getElementById('lienzo');
-    console.log( o );
+    let o   = document.getElementById('lienzo'),
+    context = o.getContext('2d');
+    
+    context.fillText( 'Hola mundo Canvas', 0, 100 );
   </script>
 
 </body>
