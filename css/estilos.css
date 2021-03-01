@@ -1,0 +1,12 @@
+/* 
+[class,id,etiqueta]{
+  regla: propiedad;
+} 
+*/
+body,html{
+  background: #270140;
+}
+canvas{
+  border: 2px solid #EDEDED;
+  background: #E4D4C8;
+}
