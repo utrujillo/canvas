@@ -1,0 +1,9 @@
+/* 
+etiqueta | identificador | clase {
+  propiedad: valor;
+} 
+*/
+
+#canvas{
+  border: 1px solid #000;
+}
