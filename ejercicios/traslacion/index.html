@@ -6,13 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Circulo</title>
   <link rel="stylesheet" href="css/core.css">
-  <style>
-    
-  </style>
 </head>
 <body>
   
-  <canvas id="canvas" width="600" height="400"></canvas>
+
+  <div id="padre">
+    <canvas id="canvas" width="600" height="400"></canvas>
+    <div id="operaciones">
+      <input type="button" id="btnFijo" value='Trasladar fijo' class='boton' />
+      <input type="button" id="btnReload" value='Reiniciar' class='boton margen-superior margen-inferior' />
+
+      <label>Pos x: </label>
+      <input type="text" id="posX" placeholder="ej. 0" class='entrada margen-inferior'>
+
+      <label>Pos y: </label>
+      <input type="text" id="posY" placeholder='ej. 10' class='entrada'>
+
+      <input type="button" id="btnTrasladar" value='Trasladar' class='boton margen-superior' />
+      <input type="button" id="btnAnimate" value='Animar' class='boton margen-superior' />
+    </div>
+  </div>
 
   <script src="js/core.js"></script>
 
