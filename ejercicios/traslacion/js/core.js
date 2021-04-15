@@ -35,12 +35,14 @@ btnAnimate.addEventListener( 'click', slowMotion )
 
 function slowMotion(){
   setTimeout( function(){
+    console.log( `${posInitX}  ${posX.value} ${posInitY} ${posY.value}` )
     posInitX += 1
     posInitY += 1
     console.log( `posInitX: ${posInitX}  posInitY: ${posInitY}` )
     cleanCanvas()
     context.fillRect( posInitX, posInitY, 30, 30 )
-    slowMotion()
+    if( posInitX <= posX.value && posInitY <= posY.value )
+      slowMotion()
   }, 1 )
 }
 
