@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    canvas{ border: 1px solid #000; }
+  </style>
+</head>
+<body>
+  <canvas id='canvas' width="400" height="400"></canvas>
+
+  <script>
+    let canvas = document.getElementById('canvas'),
+        context = canvas.getContext('2d')
+
+    function square( posX, posY, w, h ){
+      this.posX = posX
+      this.posY = posY
+      this.w = w
+      this.h = h
+    }
+
+    let square1 = new square(30, 30, 20, 20)
+    let square2 = new square(100, 100, 50, 50)
+    let square3 = new square(200, 200, 80, 80)
+    let square4 = {
+      posX: 350,
+      posY: 50,
+      w: 10,
+      h: 10,
+      saludo: function () {
+        console.log('Ejecutando saludo desde objeto')
+      }
+    }
+
+    let squares = [ square1, square2, square3, square4 ]
+
+    for(let i=0; i < squares.length; i++){
+      context.fillRect( 
+        squares[i].posX, 
+        squares[i].posY,
+        squares[i].w,
+        squares[i].h
+      )
+    }
+
+    square4.saludo()
+  </script>
+</body>
+</html>
